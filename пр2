@@ -1,0 +1,38 @@
+#1
+bytes_input = int(input("Введите количество байт: ")) 
+bits_output = bytes_input * 8  
+print(f"{bytes_input} байт = {bits_output} бит")  
+
+
+#2
+import random  
+  
+def generate_task():   
+    pages = random.randint(100, 500)  
+    lines = random.randint(30, 50)    
+    chars = random.randint(60, 100)  
+      
+    return pages, lines, chars  
+def solve_task(pages, lines, chars):  
+    total_chars = pages * lines * chars  
+    total_bytes = total_chars * 8       
+    total_kb = total_bytes / 1024       
+      
+    return total_kb  
+def print_solution(pages, lines, chars, result):  
+    print("Задача:")  
+    print(f"Электронная книга содержит {pages} страниц.")  
+    print(f"На каждой странице в среднем {lines} строк по {chars} символов.")  
+    print("Используется кодировка UTF-8. Найти объём файла в Кбайтах.")  
+      
+    print("\nРешение:")  
+    print(f"1. Находим общее количество символов: {pages} * {lines} * {chars} = {pages*lines*chars}")  
+    print(f"2. Каждый символ в UTF-8 кодируется 8 битами = 1 байту")  
+    print(f"3. Общий объём в байтах: {pages*lines*chars} * 8 = {pages*lines*chars*8}")  
+    print(f"4. Переводим в килобайты: {pages*lines*chars*8} / 1024 = {result:.2f} Кбайт")  
+      
+    print(f"\nОтвет: {result:.2f} Кбайт")  
+   
+params = generate_task()  
+result = solve_task(*params)  
+print_solution(*params, result)  
