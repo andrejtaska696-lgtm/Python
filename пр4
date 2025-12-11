@@ -228,3 +228,122 @@ elif num2 < 0:
     print(f"Второе число отрицательное: {num2} + 1000 = {result2}")
 else:
     print(True)
+#В7 Задание 1
+s = input()
+if s and s[-1] in ('я', 'и', 'е', 'ю'):
+    print(True)
+else:
+    print(False)
+
+# Задание 2
+a = float(input())
+b = float(input())
+c = float(input())
+if a > 0 and b > 0 and c > 0 and (a + b > c) and (a + c > b) and (b + c > a):
+    print(True)
+else:
+    print(False)
+
+# Задание 3
+n = int(input())
+last_digit = abs(n) % 10
+if last_digit == 0:
+    result = n ** 10
+elif last_digit == 1:
+    result = n % 3
+elif last_digit == 2:
+    result = n // 2
+else:
+    result = n ** 2
+print(result)
+#В 8 Задание 1
+password = input("Введите пароль:")
+if len(password) < 8 or password == "qwerty123":
+    print(False)
+else:
+    print(True)
+
+# Задание 2
+pc_number = 777
+num1 = int(input())
+num2 = int(input())
+if (num1 < pc_number < num2) or (num2 < pc_number < num1):
+    print(True)
+else:
+    print(False)
+
+# Задание 3
+lamp_1 = 0
+lamp_2 = 0
+print("Какую лампочку зажечь?")
+answer = input()
+if answer == "1":
+    lamp_1 = 1
+    print(f"lamp_1 = {lamp_1}, lamp_2 = {lamp_2}")
+elif answer == "2":
+    lamp_2 = 1
+    print(f"lamp_1 = {lamp_1}, lamp_2 = {lamp_2}")
+else:
+    print("Обе лампочки не горят")
+#В 9 Задание 1
+switch_1 = False
+switch_2 = False
+answer = input("Включить? ")
+if answer.lower() == "да":
+    switch_1 = True
+    switch_2 = True
+    print("Всё включено")
+    print(f"switch_1 = {switch_1}, switch_2 = {switch_2}")
+else:
+    print(f"switch_1 = {switch_1}, switch_2 = {switch_2}")
+
+# Задание 2
+number = int(input())
+if number > 0:
+    if number % 2 == 0:
+        print(True, "even")
+    else:
+        print(True, "odd")
+else:
+    print(False)
+
+# Задание 3
+text = input()
+if text and text[0] == "/":
+    print("command")
+else:
+    print("It’s string")
+#В 10 Задание 1
+s = input()
+if len(s) == 0:
+    print(None)
+elif len(s) <= 5:
+    print("short")
+elif len(s) <= 10:
+    print("normal")
+else:
+    print("long")
+
+# Задание 2
+num = int(input())
+if num < 0:
+    num = 1000000
+    print(num)
+elif num == 0:
+    num = 2
+    result = num ** 2
+    print(result)
+else:
+    result = num ** 3
+    print(result)
+
+# Задание 3
+number_1 = 10
+number_2 = 100
+user_num = int(input())
+if number_1 < user_num < number_2:
+    print(True)
+else:
+    print(False)
+
+
